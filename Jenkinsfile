@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout_Code') {
           steps {
             echo 'Checkout code..'
-            checkout([$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, submoduleCfg: [], userRemoteConfigs: [[url: 'https://github-dev.spe.sony.com/mp/EES-Demo-Devops.git']]])
+            checkout([$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/nmadaan/jenkins-demo-springboot.git']]])
           }
         }
         stage('Build') {
